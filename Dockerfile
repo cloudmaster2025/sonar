@@ -1,3 +1,3 @@
-FROM tomcat:jdk11
-COPY target/*.war webapps/
-EXPOSE 8080
+FROM ubuntu
+RUN apt update && apt install nginx -y
+CMD ["nginx", "-g", "daemon off;"]
